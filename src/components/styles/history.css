@@ -1,0 +1,362 @@
+/* Reset root element margins and padding */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Full Screen Edge-to-Edge Wrapper */
+.history-wrapper {
+  background-color: #b0c4de;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 80px;
+}
+
+/* Header Navigation Bar */
+.history-top-bar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px 10px 20px;
+}
+
+.history-back-btn {
+  position: absolute;
+  left: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease;
+  z-index: 2;
+}
+
+.history-back-btn:active {
+  transform: scale(0.95);
+}
+
+.history-page-pill {
+  background-color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.history-page-pill span {
+  font-size: 14px;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: 0.3px;
+}
+
+/* Content Area */
+.history-content {
+  flex: 1;
+  width: 100%;
+  padding: 12px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Toggle Switch Segment */
+.toggle-segment-card {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.toggle-tab {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #64748b;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.toggle-tab.active {
+  background-color: #eff6ff;
+  color: #1d61f2;
+}
+
+/* Status Groups */
+.history-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+}
+
+.status-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.status-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-left: 2px;
+}
+
+.status-header h3 {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1e293b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.count-badge {
+  font-size: 10px;
+  font-weight: 800;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orange-badge {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+.green-badge {
+  background-color: #d1fae5;
+  color: #059669;
+}
+
+.blue-badge {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+.gray-badge {
+  background-color: #cbd5e1;
+  color: #475569;
+}
+
+.history-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Time-Based Card Styling */
+.time-card {
+  width: 100%;
+  background-color: #f8fafc;
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left colored accent bars */
+.time-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.time-card.accent-orange::before {
+  background-color: #f59e0b;
+}
+
+.time-card.accent-green::before {
+  background-color: #10b981;
+}
+
+.time-card.accent-blue::before {
+  background-color: #3b82f6;
+}
+
+.card-left-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.task-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.task-name.strike-through {
+  text-decoration: line-through;
+  color: #64748b;
+}
+
+.time-subtext {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.card-right-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.orange-clock {
+  background-color: #fef3c7;
+}
+
+.green-check {
+  background-color: #10b981;
+}
+
+.blue-cal {
+  background-color: #eff6ff;
+}
+
+/* Non-Time Based Card Styling */
+.nontime-card {
+  width: 100%;
+  background-color: #f8fafc;
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.nontime-card:active {
+  transform: scale(0.99);
+}
+
+.nontime-icon-badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background-color: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nontime-left-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Fixed Bottom Navigation Bar */
+.history-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 0 12px;
+  z-index: 100;
+}
+
+.history-bottom-nav .nav-item {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  flex: 1;
+  height: 100%;
+  cursor: pointer;
+}
+
+.history-bottom-nav .nav-item span {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.history-bottom-nav .nav-item.active {
+  color: #ffffff;
+}
+
+.active-nav-badge {
+  background-color: #38bdf8;
+  color: #ffffff;
+  padding: 6px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.4);
+}

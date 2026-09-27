@@ -1,0 +1,346 @@
+/* Schedule Clash Screen Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #a8c0d8;
+  color: #1e293b;
+}
+
+.clash-page-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #a8c0d8;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 100px;
+}
+
+/* Dark Top Bar */
+.clash-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background-color: #0f172a;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.clash-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease;
+}
+
+.clash-icon-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bell-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444;
+  border-radius: 50%;
+}
+
+.clash-page-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  padding: 8px 24px;
+  border-radius: 20px;
+}
+
+.clash-page-pill span {
+  font-weight: 800;
+  font-size: 14px;
+  color: #f87171;
+  letter-spacing: 0.5px;
+}
+
+/* Content Body */
+.clash-content-body {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Warning Banner */
+.clash-warning-banner {
+  width: 100%;
+  background-color: #fef2f2;
+  border-radius: 20px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.08);
+}
+
+.warning-icon-wrapper {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: #fee2e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.warning-banner-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #991b1b;
+  line-height: 1.4;
+}
+
+/* Time Pill */
+.clash-time-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fee2e2;
+  border-radius: 20px;
+  padding: 8px 20px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #991b1b;
+}
+
+/* Cards & VS */
+.clash-cards-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.clash-task-card {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.clash-task-card:hover {
+  transform: translateY(-2px);
+}
+
+.clash-task-card.selected {
+  border-color: #0284c7;
+  background-color: #f0f9ff;
+}
+
+.task-left-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.task-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.task-time-sub {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 600;
+}
+
+.task-checkbox {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  border: 2px solid #cbd5e1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.task-checkbox.checked {
+  border-color: #0284c7;
+  background-color: #e0f2fe;
+}
+
+/* Divider VS */
+.clash-vs-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 4px 0;
+}
+
+.vs-line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.vs-badge {
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.clash-instruction-text {
+  font-size: 13px;
+  color: #475569;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Action Buttons */
+.clash-actions-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.clash-btn {
+  width: 100%;
+  padding: 16px;
+  border-radius: 14px;
+  border: none;
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.clash-btn:active {
+  transform: scale(0.98);
+}
+
+.btn-resolve {
+  background-color: #2563eb;
+}
+
+.btn-resolve:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-mark-done {
+  background-color: #ef4444;
+}
+
+.btn-mark-done:hover {
+  background-color: #dc2626;
+}
+
+.clash-btn-dismiss-link {
+  background: transparent;
+  border: none;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 10px;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+.clash-btn-dismiss-link:hover {
+  color: #0f172a;
+}
+
+/* Bottom Nav */
+.clash-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background-color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+  z-index: 100;
+}
+
+.clash-nav-item {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.clash-nav-item.active {
+  color: #ffffff;
+}

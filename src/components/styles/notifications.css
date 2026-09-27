@@ -1,0 +1,225 @@
+/* Notifications Screen Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: #a8c0d8;
+  color: #1e293b;
+}
+
+.notif-page-container {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #a8c0d8;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+/* Header */
+.notif-top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  width: 100%;
+}
+
+.notif-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.1s ease;
+}
+
+.notif-icon-btn:active {
+  transform: scale(0.95);
+}
+
+.notif-page-pill {
+  background-color: #ffffff;
+  padding: 8px 32px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.notif-page-pill span {
+  font-weight: 800;
+  font-size: 14px;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+}
+
+.top-spacer {
+  width: 44px;
+}
+
+/* Main Content List */
+.notif-content-body {
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 12px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Cards */
+.notif-card {
+  background-color: #f1f5f9;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.2s ease;
+}
+
+.notif-card.read-state {
+  opacity: 0.65;
+}
+
+.notif-card-header {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.notif-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bg-alarm-green {
+  background-color: #22c55e;
+}
+
+.bg-reminder-orange {
+  background-color: #f59e0b;
+}
+
+.notif-text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.notif-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notif-item-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.notif-item-message {
+  font-size: 13px;
+  color: #475569;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.notif-date-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+}
+
+/* Card Footer */
+.notif-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e2e8f0;
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+.notif-timestamp {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.read-btn {
+  background-color: #e2e8f0;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  color: #334155;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.2s ease;
+}
+
+.read-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.read-btn.active-read {
+  background-color: #22c55e;
+  color: #ffffff;
+}
+
+/* Bottom Nav */
+.notif-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background-color: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+  z-index: 100;
+}
+
+.notif-nav-item {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+
+.notif-nav-item:hover {
+  color: #ffffff;
+}

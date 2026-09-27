@@ -1,0 +1,269 @@
+/* ReminderAlarm.css - Full Wide Responsive Layout */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.reminder-alarm-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #dbeafe; /* Soft blue app background */
+  position: relative;
+  padding-bottom: 85px; /* Space for bottom nav */
+}
+
+/* Header */
+.reminder-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: transparent;
+  width: 100%;
+}
+
+.header-icon-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.header-pill {
+  background-color: #ffffff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.header-pill span {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: #1e293b;
+}
+
+.header-spacer {
+  width: 28px;
+}
+
+/* Main Content Area */
+.reminder-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 16px 20px 16px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Reminder Card */
+.reminder-card {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 24px 22px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reminder-from-heading {
+  font-size: 14px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.reminder-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.section-label-underline {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #1e293b;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.section-label-plain {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #1e293b;
+}
+
+.reminder-title-text {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+  text-transform: uppercase;
+}
+
+.reminder-description-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+/* Location Block */
+.reminder-location-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.location-address-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #334155;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+}
+
+.reminder-mini-map {
+  height: 130px;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #cbd5e1;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.04);
+  margin-top: 4px;
+}
+
+/* Time & Date Block */
+.reminder-time-date-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+  margin-top: 2px;
+}
+
+.meta-row {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.meta-label {
+  width: 60px;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.meta-colon {
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.meta-value {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+/* Action Buttons Grid (2x2 style) */
+.reminder-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  width: 100%;
+}
+
+.action-pill-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 30px;
+  border: 1px solid #cbd5e1;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+.action-pill-btn:active {
+  transform: scale(0.97);
+}
+
+.btn-dark {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.btn-forward-arrow {
+  justify-content: space-between;
+  padding: 14px 20px;
+}
+
+.arrow-icon {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+/* Bottom Navigation Bar */
+.reminder-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background-color: #1e293b;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 10px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-item {
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  cursor: pointer;
+  flex: 1;
+  gap: 3px;
+  transition: color 0.2s ease;
+}
+
+.nav-item span {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.nav-item:hover,
+.nav-item:active {
+  color: #ffffff;
+}

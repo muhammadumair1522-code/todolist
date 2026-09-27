@@ -1,0 +1,50 @@
+/* Location Search & Map Container Styles for EditTask */
+.map-search-wrapper {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.map-search-wrapper .form-input {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.map-search-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.2);
+  transition: background-color 0.2s ease;
+}
+
+.map-search-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.map-container-box {
+  height: 280px;
+  width: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+.selected-location-text {
+  font-size: 13px;
+  color: #334155;
+  margin-top: 8px;
+  font-weight: 600;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 8px 12px;
+  border-radius: 10px;
+}
